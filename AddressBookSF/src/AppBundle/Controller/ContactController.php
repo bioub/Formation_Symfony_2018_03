@@ -9,59 +9,51 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * @Route("/contacts")
  */
-class ContactController extends Controller
-{
-   
+class ContactController extends Controller {
+
     /**
      * @Route("/")
      */
-    public function listAction()
-    {
-       $response = new \Symfony\Component\HttpFoundation\Response();
-       $response->setContent("<h1>List Contact</h1>");
-       return $response;
+    public function listAction() {
+        return $this->render('AppBundle:Contact:list.html.twig', array(
+                        // ...
+        ));
     }
-    
-    
-    
+
     /**
      * @Route("/{id}")
      */
-    public function showAction($id)
-    {
-       $response = new \Symfony\Component\HttpFoundation\Response();
-       $response->setContent("<h1>Show Contact</h1>");
-       return $response;
+    public function showAction($id) {
+        return $this->render('AppBundle:Contact:show.html.twig', array(
+                        // ...
+        ));
     }
-    
+
     /**
      * @Route("/add")
      */
-    public function addAction()
-    {
-       $response = new \Symfony\Component\HttpFoundation\Response();
-       $response->setContent("<h1>Add Contact</h1>");
-       return $response;
+    public function addAction() {
+        return $this->render('AppBundle:Contact:add.html.twig', array(
+                        // ...
+        ));
     }
-    
+
     /**
-     * @Route("/{id}/update")
+     * @Route("/{id}/update", requirements = { "id": "[1-9][0-9]*" })
      */
-    public function updateAction($id)
-    {
-       $response = new \Symfony\Component\HttpFoundation\Response();
-       $response->setContent("<h1>Update Contact</h1>");
-       return $response;
+    public function updateAction($id) {
+        return $this->render('AppBundle:Contact:update.html.twig', array(
+                        // ...
+        ));
     }
-    
+
     /**
      * @Route("/{id}/delete")
      */
-    public function deleteAction($id)
-    {
-       $response = new \Symfony\Component\HttpFoundation\Response();
-       $response->setContent("<h1>Delete Contact</h1>");
-       return $response;
+    public function deleteAction($id) {
+        return $this->render('AppBundle:Contact:delete.html.twig', array(
+                        // ...
+        ));
     }
-    
+
 }
