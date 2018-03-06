@@ -13,18 +13,18 @@
             </tr>
         </thead>
         <tbody>
+            {% for c in contacts %}
             <tr>
-                <td>Jean Dupont</td>
+                <td>{{ c.prenom }} {{ c.nom }}</td>
                 <td>
-                    <a href="{{ path('app_contact_show', {id: '123'}) }}">Afficher</a>
+                    <a href="{{ path('app_contact_show', {id: c.id}) }}">Afficher</a>
                 </td>
             </tr>
-            <tr>
-                <td>Eric Martin</td>
-                <td>
-                    <a href="{{ path('app_contact_show', {id: '456'}) }}">Afficher</a>
-                </td>
-            </tr>
+            {% endfor %}
         </tbody>
     </table>
+
+    <p>
+        <a href="{{ path('app_contact_add') }}" class="btn">Ajouter un contact</a>
+    </p>
 {% endblock %}

@@ -1,20 +1,20 @@
 <?php
 // Programmation impérative
-$prenom = 'Romain';
-echo "Bonjour $prenom\n";
+$nom = 'Romain';
+echo "Bonjour $nom\n";
 
 // Programmation procédurale
-$prenom = 'Romain';
-function hello($prenom) {
-    return "Bonjour $prenom\n";
+$nom = 'Romain';
+function hello($nomContact) {
+    return "Bonjour $nomContact\n";
 }
-echo hello($prenom);
+echo hello($nom);
 
 // Programmation orientée objet
 class Contact {
-    public $prenom = 'Romain';
+    public $nom = 'Romain';
     function hello() {
-        return "Bonjour $this->prenom\n";
+        return "Bonjour $this->nom\n";
     }
 }
 $romain = new Contact();
