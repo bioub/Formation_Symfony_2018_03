@@ -31,7 +31,7 @@ class DefaultController extends Controller
     }
     
     /**
-     * @Route("/hello/{prenom}")
+     * @Route("/bonjour/{prenom}")
      */
     public function helloAction($prenom) {
         $response = new \Symfony\Component\HttpFoundation\Response();
